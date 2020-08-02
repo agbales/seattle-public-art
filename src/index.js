@@ -13,10 +13,14 @@ const data = fetch("https://data.seattle.gov/resource/public-art.json")
       const long = entry.longitude;
 
       const artInfo = `<div>
-                      <p>${entry.location}</p>
-                      <p>${entry.title}</P>
-                      <p>${entry.date}</p>
-                      <p>${entry.artist_first_name} ${entry.artist_last_name}</p>
+                        <span class="classification">${
+                          entry.classification
+                        }</span>
+                        <div class="info">"${entry.title}" (${entry.date})</div>
+                        <div class="info">${entry.artist_first_name || ""} ${
+        entry.artist_last_name || ""
+      }</div>
+                        <div class="info">${entry.location}</div>
                     </div>`;
       L.marker([lat, long]).addTo(map).bindPopup(artInfo);
     });

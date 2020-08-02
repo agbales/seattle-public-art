@@ -1,10 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
 body {
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
+
 #map {
   position: absolute;
   top: 0;
   bottom: 0;
   width: 100%;
+}
+
+.info {
+  color: #151414;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.classification {
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px;
 }
